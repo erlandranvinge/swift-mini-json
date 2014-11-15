@@ -39,7 +39,7 @@ let f = json["missing-float"].float() // => 0.0
 let d = json["missing-double"].double() // => 0.0
 ```
 ```swift
-for color in json["missing"] {} // same as iterating over empty collection
+for color in json["missing"] { } // same as iterating over empty collection
 ```
 
 The same applies for invalid type conversions:
@@ -47,6 +47,6 @@ The same applies for invalid type conversions:
 let s = json["string"].int() // => 0
 ```
 ```swift
-for color in json["string"] // same as iterating over empty collection
+for color in json["string"] { } // same as iterating over empty collection
 ```
 
