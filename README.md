@@ -9,23 +9,23 @@ A single class compact simple JSON reading library in swift.
 let data = NSData(...) // E.g. result from API, file read etc.
 let json = Json(data: car)
 let carName = json["name"].string()
-let carName = json["wheels"].int()
-let carName = json["weight"].float()
-let nested = json["model"]["name"].string()
+let wheelCount = json["wheelCount"].int()
+let weight = json["weight"].float()
+let nestedModelName = json["model"]["name"].string()
 ```
 
 #### Arrays
 
 ```swift
-for name in json["names"] {
+for name in json["passengers"] {
     println(name.string()) 
 }
 ```
 ```swift
-for color in json["car"]["colors"] {
-    let r = color["red"]
-    let g = color["green"]
-    let b = color["blue"]
+for wheel in json["car"]["wheels"] {
+    let brand = wheel["brand"]
+    let radius = wheel["radius"].float()
+    let boltCount = wheel["boltCount"].int()
 }
 ```
 
@@ -39,7 +39,7 @@ let f = json["missing-float"].float() // => 0.0
 let d = json["missing-double"].double() // => 0.0
 ```
 ```swift
-for color in json["missing"] { } // same as iterating over empty collection
+for missing in json["missing"] { } // same as iterating over empty collection
 ```
 
 The same applies for invalid type conversions:
@@ -47,6 +47,6 @@ The same applies for invalid type conversions:
 let s = json["string"].int() // => 0
 ```
 ```swift
-for color in json["string"] { } // same as iterating over empty collection
+for item in json["string"] { } // same as iterating over empty collection
 ```
 
