@@ -3,27 +3,6 @@ swift-mini-json
 
 A single class compact simple JSON reading library in swift. 
 
-*Example data*
-```json
-{
-    name: 'Ford',
-    wheelCount: 4,
-    weight: 1442.2,
-    model: {
-        name: 'F5'
-    },
-    passengers: [ 'Tony', 'Kenny', 'Lenny', 'Benny' ],
-    components: {
-        wheels: [{
-            brand: 'Hakkapelitta',
-            radius: 500.2,
-            boltCount: 16,
-        }
-        ]
-    }
-}
-```
-
 #### Properties
 
 ```swift
