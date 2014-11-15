@@ -7,15 +7,17 @@ A single class compact simple JSON reading library in swift.
 
 ```swift
 let car = NSData(...)
-let json = JSON(data: data)
+let json = JSON(data: car)
 let carName = json["name"].string()
-let modelName = json["model"]["name"].string()
+let carName = json["wheels"].int()
+let carName = json["weight"].float()
+let nested = json["model"]["name"].string()
 ```
 
 #### Arrays
 
 ```swift
-for color in json["colors"] {
+for color in json["car"]["colors"] {
     let r = color["red"]
     let g = color["green"]
     let b = color["blue"]
