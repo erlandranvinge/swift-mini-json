@@ -17,6 +17,11 @@ let nested = json["model"]["name"].string()
 #### Arrays
 
 ```swift
+for name in json["names"] {
+    println(name.string()) 
+}
+```
+```swift
 for color in json["car"]["colors"] {
     let r = color["red"]
     let g = color["green"]
@@ -33,9 +38,15 @@ let i = json["missing-int"].int() // => 0
 let f = json["missing-float"].float() // => 0.0
 let d = json["missing-double"].double() // => 0.0
 ```
+```swift
+for color in json["missing"] {} // same as iterating over empty collection
+```
 
 The same applies for invalid type conversions:
 ```swift
 let s = json["string"].int() // => 0
+```
+```swift
+for color in json["string"] // same as iterating over empty collection
 ```
 
