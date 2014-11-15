@@ -6,7 +6,7 @@ A single class compact simple JSON reading library in swift.
 #### Properties
 
 ```swift
-let car = NSData(...)
+let data = NSData(...) // E.g. result from API, file read etc.
 let json = Json(data: car)
 let carName = json["name"].string()
 let carName = json["wheels"].int()
