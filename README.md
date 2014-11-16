@@ -4,9 +4,12 @@ swift-mini-json
 A single class compact simple JSON reading library in swift. 
 
 #### Properties
+```json
+{ name: 'Ford', wheelCount: 4, weight: 2125.5, model: { name: 'F5' } }
+```
 
 ```swift
-let data = NSData(...) // E.g. result from API, file read etc.
+let car = NSData(...) // E.g. result from API, file read etc.
 let json = Json(data: car)
 let carName = json["name"].string()
 let wheelCount = json["wheelCount"].int()
