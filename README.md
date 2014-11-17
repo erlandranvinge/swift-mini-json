@@ -41,9 +41,10 @@ for name in json["passengers"] {
     }
 }
 ```
+**Swift:**
 ```swift
 for wheel in json["components"]["wheels"] {
-    let brand = wheel["brand"]
+    let brand = wheel["brand"].string()
     let radius = wheel["radius"].float()
     let boltCount = wheel["boltCount"].int()
 }
