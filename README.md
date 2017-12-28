@@ -1,7 +1,7 @@
 swift-mini-json
 ===============
 
-A single class compact (~ 30 loc) simple JSON reading library in swift. 
+A single class compact (~ 40 loc) JSON reading library in swift. Meant to be dropped in to any project without fuzz.
 
 #### Properties
 
