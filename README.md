@@ -1,7 +1,7 @@
 swift-mini-json
 ===============
 
-A single class compact (~ 40 loc) JSON reading library in swift. Meant to be dropped in to any project without fuzz. Most recent version was tested with Swift 3.2 and 4.0. If you're stuck on an older version of swift, see the "legacy" folder for deprecated versions of the lib.
+A single class compact (~ 40 loc) JSON reading library in swift. Meant to be dropped in to any project without fuzz. Most recent version was tested with swift 3.2 and 4.0. If you're stuck on an older version of swift, see the "legacy" folder for deprecated versions.
 
 #### Properties
 
